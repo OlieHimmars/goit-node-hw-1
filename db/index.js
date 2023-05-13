@@ -2,6 +2,7 @@ const fs = require("fs/promises");
 const path = require("path");
 const { nanoid } = require("nanoid");
 
+
 const contactsPath = path.join(__dirname, "contacts.json");
 
 const listContacts = async () => {
@@ -25,6 +26,7 @@ const removeContact = async (id) => {
     return result;
 };
 
+
 const addContact = async ({ name, email, phone }) => {
     const contacts = await listContacts();
     const newContact = {
@@ -37,8 +39,9 @@ const addContact = async ({ name, email, phone }) => {
 
 
 module.exports = {
-  listContacts,
-  getContactById,
-  removeContact,
-  addContact,
+    listContacts,
+    getContactById,
+    removeContact,
+    addContact,
+ 
 };

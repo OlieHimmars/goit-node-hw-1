@@ -3,11 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index",
-    "dev": "nodemon index"
+    "dev": "nodemon index",
+    "lint": "eslint ."
   },
   "keywords": [],
   "author": "",
@@ -17,6 +18,7 @@
   },
   "dependencies": {
     "commander": "^10.0.1",
+    "eslint": "^8.40.0",
     "nanoid": "^4.0.2",
     "yargs": "^17.7.2"
   }

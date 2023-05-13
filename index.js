@@ -1,4 +1,4 @@
-import { listContacts, getContactById, removeContact, addContact } from "./contacts.js";
+const { listContacts, getContactById, removeContact, addContact } = require('./contacts');
 
 const argv = require("yargs").argv;
 
@@ -6,7 +6,7 @@ const invokeAction = async ({ action, id, name, email, phone }) => {
   switch (action) {
     case 'list':
       const allContacts = await listContacts();
-      console.table(allContacts);
+      console.log(allContacts);
       break;
     case 'get':
       const oneContact = await getContactById(id);
